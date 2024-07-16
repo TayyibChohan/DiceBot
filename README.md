@@ -5,6 +5,7 @@
 This bot is designed to calculate dice statistics through simulating dice rolls.
 
 **Notes:**
+
 - You can set the prefix to whatever you like, but in this document, we will use `$`.
 - You can DM yourself private results with another prefix you can specify. In this document, we will use `?`. For example, `!?r d20` would send the result to your DM. Note: the bot host can still see these in the log files.
 - Spaces are important for parsing, so follow the examples carefully. Currently, there is no support for parentheses, so calculations are done strictly left to right (NOT following BEDMAS).
@@ -14,9 +15,8 @@ This bot is designed to calculate dice statistics through simulating dice rolls.
 ### Command Format
 
 ```
-
+$r <num_dice>d<num_sides> <operation> <modifier>
 ```
-
 
 - `<num_dice>`: The number of dice to roll (default is 1).
 - `<num_sides>`: The number of sides on each die.
@@ -28,7 +28,6 @@ This bot is designed to calculate dice statistics through simulating dice rolls.
 ```
 $r 4d6 + 5
 ```
-
 
 ### Description
 
@@ -44,7 +43,6 @@ A user can simulate their roll to determine statistics of the outcome and apply 
 $rs <accuracy> <num_dice>d<num_sides><dice_mod> <operation> <modifier>
 ```
 
-
 - `<accuracy>`: The number of iterations to run for the simulation (1 to 5).
 - `<num_dice>`: The number of dice to roll.
 - `<num_sides>`: The number of sides on each die.
@@ -54,13 +52,11 @@ $rs <accuracy> <num_dice>d<num_sides><dice_mod> <operation> <modifier>
 
 ### Examples
 
-
 ```
 $rs -a2 4d6 + 5
 $rs -a5 2d20kh1 - 5
 $rs 10d20rr1
 ```
-
 
 ### Accuracy
 
@@ -101,4 +97,3 @@ There are five types of dice modifiers currently supported:
 
 - If a command is not recognized or is formatted incorrectly, the bot will provide an error message indicating the issue.
 - Ensure that all components of the command are included and correctly formatted.
-
