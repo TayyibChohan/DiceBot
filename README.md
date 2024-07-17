@@ -10,6 +10,21 @@ This bot is designed to calculate dice statistics through simulating dice rolls.
 - You can DM yourself private results with another prefix you can specify. In this document, we will use `?`. For example, `!?r d20` would send the result to your DM. Note: the bot host can still see these in the log files.
 - Spaces are important for parsing, so follow the examples carefully. Currently, there is no support for parentheses, so calculations are done strictly left to right (NOT following BEDMAS).
 
+## Installation / Usage
+
+- Clone the repository
+    - `git clone https://github.com/TayyibChohan/DiceBot.git`
+- Install dependencies using conda and the provided environment.yml
+    - `conda env create -f environment.yml`
+- Create a .env file
+```
+DISCORD_TOKEN=<token here>
+MESSAGE_PREFIX=!
+CREDIT=<host name>
+```
+- Run main.py 
+    - `python main.py`
+
 ## Rolling
 
 ### Command Format
